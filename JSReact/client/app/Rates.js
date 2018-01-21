@@ -128,8 +128,8 @@ class Rates extends Component {
 
   componentDidMount() {
       if (this.state.intervalId !== undefined) {clearInterval(this.state.intervalId);}
-  //    let intervalId = setInterval(this.fetchData, 60000);
-  //    this.setState({ intervalId : intervalId });
+      let intervalId = setInterval(this.fetchData, 60000);
+      this.setState({ intervalId : intervalId });
    }
 
   doInstrRemove = event => {
