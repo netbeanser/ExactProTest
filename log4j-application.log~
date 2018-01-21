@@ -1,0 +1,1005 @@
+2018-01-21 19:31:35 INFO  ExactProContextListener:42 - Argument -Dcfgfile not specified. Falling back to calsspath
+2018-01-21 19:31:35 INFO  ExactProContextListener:66 - Configuration: resources/application.properties
+2018-01-21 19:31:35 INFO  ExactProContextListener:85 - ExactProConfig: InstrumentListUrl=http://priceticker.exactpro.com/RestInstruments/json/instrumentList;rateUrl=http://priceticker.exactpro.com/RestInstruments/json/price?id=;rateInterval=30;connectTimeout=5000
+2018-01-21 19:31:55 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:31:55 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:31:55 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:31:55 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 0][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:31:55 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:31:55 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:31:55 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45842<->88.99.184.198:80
+2018-01-21 19:31:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-0: set socket timeout to 5000
+2018-01-21 19:31:55 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/instrumentList HTTP/1.1
+2018-01-21 19:31:55 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:31:55 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:31:55 DEBUG headers:133 - http-outgoing-0 >> GET /RestInstruments/json/instrumentList HTTP/1.1
+2018-01-21 19:31:55 DEBUG headers:136 - http-outgoing-0 >> Host: priceticker.exactpro.com
+2018-01-21 19:31:56 DEBUG headers:136 - http-outgoing-0 >> Connection: Keep-Alive
+2018-01-21 19:31:56 DEBUG headers:136 - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:31:56 DEBUG headers:136 - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:31:56 DEBUG wire:73 - http-outgoing-0 >> "GET /RestInstruments/json/instrumentList HTTP/1.1[\r][\n]"
+2018-01-21 19:31:56 DEBUG wire:73 - http-outgoing-0 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:31:56 DEBUG wire:73 - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:31:56 DEBUG wire:73 - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:31:56 DEBUG wire:73 - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:31:56 DEBUG wire:73 - http-outgoing-0 >> "[\r][\n]"
+2018-01-21 19:31:56 DEBUG wire:73 - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:31:56 DEBUG wire:73 - http-outgoing-0 << "Server: nginx[\r][\n]"
+2018-01-21 19:31:56 DEBUG wire:73 - http-outgoing-0 << "Date: Sun, 21 Jan 2018 15:32:56 GMT[\r][\n]"
+2018-01-21 19:31:56 DEBUG wire:73 - http-outgoing-0 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:31:56 DEBUG wire:73 - http-outgoing-0 << "Content-Length: 1177[\r][\n]"
+2018-01-21 19:31:56 DEBUG wire:73 - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:31:56 DEBUG wire:73 - http-outgoing-0 << "[\r][\n]"
+2018-01-21 19:31:56 DEBUG wire:87 - http-outgoing-0 << "{"44":"GBP/NZD","45":"GBP/PLN","46":"GBP/RON","47":"GBP/SEK","48":"GBP/SGD","49":"GBP/TRY","50":"GBP/USD","51":"GBP/ZAR","52":"HKD/JPY","53":"NZD/CAD","10":"CHF/JPY","54":"NZD/CHF","11":"CHF/RON","55":"NZD/JPY","12":"CHF/TRY","56":"NZD/USD","13":"EUR/AUD","57":"SGD/HKD","14":"EUR/CAD","58":"SGD/JPY","15":"EUR/CHF","59":"TRY/BGN","16":"EUR/CZK","17":"EUR/DKK","18":"EUR/GBP","19":"EUR/HKD","1":"AUD/CAD","2":"AUD/CHF","3":"AUD/JPY","4":"AUD/NZD","5":"AUD/USD","6":"BGN/RON","7":"CAD/CHF","8":"CAD/JPY","9":"CHF/BGN","60":"TRY/JPY","61":"TRY/RON","62":"USD/BGN","63":"USD/CAD","20":"EUR/HUF","64":"USD/CHF","21":"EUR/ILS","65":"USD/CZK","22":"EUR/JPY","66":"USD/DKK","23":"EUR/MXN","67":"USD/HKD","24":"EUR/NOK","68":"USD/HUF","25":"EUR/NZD","69":"USD/ILS","26":"EUR/PLN","27":"EUR/RON","28":"EUR/RUB","29":"EUR/SEK","70":"USD/JPY","71":"USD/MXN","72":"USD/NOK","73":"USD/PLN","30":"EUR/SGD","74":"USD/RON","31":"EUR/TRY","75":"USD/RUB","32":"EUR/USD","76":"USD/SEK","33":"EUR/ZAR","77":"USD/SGD","34":"GBP/AUD","78":"USD/TRY","35":"GBP/BGN","79":"USD/ZAR","36":"GBP/CAD","37":"GBP/CHF","38":"GBP/CZK","39":"GBP/DKK","40":"GBP/HKD","41":"GBP/HUF","42":"GBP/JPY","43":"GBP/NOK"}"
+2018-01-21 19:31:56 DEBUG headers:122 - http-outgoing-0 << HTTP/1.1 200 OK
+2018-01-21 19:31:56 DEBUG headers:125 - http-outgoing-0 << Server: nginx
+2018-01-21 19:31:56 DEBUG headers:125 - http-outgoing-0 << Date: Sun, 21 Jan 2018 15:32:56 GMT
+2018-01-21 19:31:56 DEBUG headers:125 - http-outgoing-0 << Content-Type: application/json
+2018-01-21 19:31:56 DEBUG headers:125 - http-outgoing-0 << Content-Length: 1177
+2018-01-21 19:31:56 DEBUG headers:125 - http-outgoing-0 << Connection: keep-alive
+2018-01-21 19:31:56 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:31:56 INFO  ExactProServlet:43 - Length=1177
+2018-01-21 19:31:56 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 0][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:31:56 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-0: set socket timeout to 0
+2018-01-21 19:31:56 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 0][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:31:56 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:31:56 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-0: Close connection
+2018-01-21 19:31:56 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:32:02 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:32:02 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:32:02 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:32:02 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 1][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:32:02 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:32:02 INFO  WSConfig:24 - SUBPROTOCOL=json
+2018-01-21 19:32:02 INFO  WSConfig:27 - IN HANDSHAKE
+2018-01-21 19:32:02 INFO  WSConfig:32 - DOES NOT COTAIN
+2018-01-21 19:32:02 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:32:02 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45844<->88.99.184.198:80
+2018-01-21 19:32:02 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-1: set socket timeout to 5000
+2018-01-21 19:32:02 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:32:02 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:32:02 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:32:02 DEBUG headers:133 - http-outgoing-1 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:32:02 DEBUG headers:136 - http-outgoing-1 >> Host: priceticker.exactpro.com
+2018-01-21 19:32:02 DEBUG headers:136 - http-outgoing-1 >> Connection: Keep-Alive
+2018-01-21 19:32:02 DEBUG headers:136 - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:32:02 DEBUG headers:136 - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:32:02 DEBUG wire:73 - http-outgoing-1 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:32:02 DEBUG wire:73 - http-outgoing-1 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:32:02 DEBUG wire:73 - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:32:02 DEBUG wire:73 - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:32:02 DEBUG wire:73 - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:32:02 DEBUG wire:73 - http-outgoing-1 >> "[\r][\n]"
+2018-01-21 19:32:02 INFO  WSServer:37 - WS Client connected: 0
+2018-01-21 19:32:02 DEBUG wire:73 - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:32:02 DEBUG wire:73 - http-outgoing-1 << "Server: nginx[\r][\n]"
+2018-01-21 19:32:02 DEBUG wire:73 - http-outgoing-1 << "Date: Sun, 21 Jan 2018 15:33:03 GMT[\r][\n]"
+2018-01-21 19:32:02 DEBUG wire:73 - http-outgoing-1 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:32:02 DEBUG wire:73 - http-outgoing-1 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:32:02 DEBUG wire:73 - http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:32:02 DEBUG wire:73 - http-outgoing-1 << "[\r][\n]"
+2018-01-21 19:32:02 DEBUG wire:87 - http-outgoing-1 << "{"price":105.88369}"
+2018-01-21 19:32:02 DEBUG headers:122 - http-outgoing-1 << HTTP/1.1 200 OK
+2018-01-21 19:32:02 DEBUG headers:125 - http-outgoing-1 << Server: nginx
+2018-01-21 19:32:02 DEBUG headers:125 - http-outgoing-1 << Date: Sun, 21 Jan 2018 15:33:03 GMT
+2018-01-21 19:32:02 DEBUG headers:125 - http-outgoing-1 << Content-Type: application/json
+2018-01-21 19:32:02 DEBUG headers:125 - http-outgoing-1 << Content-Length: 19
+2018-01-21 19:32:02 DEBUG headers:125 - http-outgoing-1 << Connection: keep-alive
+2018-01-21 19:32:02 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:32:02 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:32:02 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 1][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:32:02 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-1: set socket timeout to 0
+2018-01-21 19:32:02 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 1][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:32:02 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:32:02 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-1: Close connection
+2018-01-21 19:32:02 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:32:03 INFO  WSServer:58 - Message from client: sessionId=0Msg: ["10"]
+2018-01-21 19:32:03 INFO  WSServer:60 - IDDDDDSSS=[10]
+2018-01-21 19:32:04 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:32:04 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:32:04 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:32:04 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 2][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:32:04 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:32:04 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:32:04 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45845<->88.99.184.198:80
+2018-01-21 19:32:04 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-2: set socket timeout to 5000
+2018-01-21 19:32:04 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:32:04 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:32:04 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:32:04 DEBUG headers:133 - http-outgoing-2 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:32:04 DEBUG headers:136 - http-outgoing-2 >> Host: priceticker.exactpro.com
+2018-01-21 19:32:04 DEBUG headers:136 - http-outgoing-2 >> Connection: Keep-Alive
+2018-01-21 19:32:04 DEBUG headers:136 - http-outgoing-2 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:32:04 DEBUG headers:136 - http-outgoing-2 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:32:04 DEBUG wire:73 - http-outgoing-2 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:32:04 DEBUG wire:73 - http-outgoing-2 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:32:04 DEBUG wire:73 - http-outgoing-2 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:32:04 DEBUG wire:73 - http-outgoing-2 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:32:04 DEBUG wire:73 - http-outgoing-2 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:32:04 DEBUG wire:73 - http-outgoing-2 >> "[\r][\n]"
+2018-01-21 19:32:04 DEBUG wire:73 - http-outgoing-2 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:32:04 DEBUG wire:73 - http-outgoing-2 << "Server: nginx[\r][\n]"
+2018-01-21 19:32:04 DEBUG wire:73 - http-outgoing-2 << "Date: Sun, 21 Jan 2018 15:33:04 GMT[\r][\n]"
+2018-01-21 19:32:04 DEBUG wire:73 - http-outgoing-2 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:32:04 DEBUG wire:73 - http-outgoing-2 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:32:04 DEBUG wire:73 - http-outgoing-2 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:32:04 DEBUG wire:73 - http-outgoing-2 << "[\r][\n]"
+2018-01-21 19:32:04 DEBUG wire:87 - http-outgoing-2 << "{"price":105.88369}"
+2018-01-21 19:32:04 DEBUG headers:122 - http-outgoing-2 << HTTP/1.1 200 OK
+2018-01-21 19:32:04 DEBUG headers:125 - http-outgoing-2 << Server: nginx
+2018-01-21 19:32:04 DEBUG headers:125 - http-outgoing-2 << Date: Sun, 21 Jan 2018 15:33:04 GMT
+2018-01-21 19:32:04 DEBUG headers:125 - http-outgoing-2 << Content-Type: application/json
+2018-01-21 19:32:04 DEBUG headers:125 - http-outgoing-2 << Content-Length: 19
+2018-01-21 19:32:04 DEBUG headers:125 - http-outgoing-2 << Connection: keep-alive
+2018-01-21 19:32:04 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:32:04 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:32:04 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 2][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:32:04 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-2: set socket timeout to 0
+2018-01-21 19:32:04 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 2][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:32:04 INFO  ExactProPrice:55 - SB={"price":105.88369},
+2018-01-21 19:32:04 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:32:04 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-2: Close connection
+2018-01-21 19:32:04 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:32:04 INFO  ExactProPrice:63 - RET="{\"price\":105.88369}{\"price\":105.88369}"
+2018-01-21 19:32:41 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:32:41 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:32:41 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:32:41 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 3][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:32:41 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:32:41 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:32:41 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45846<->88.99.184.198:80
+2018-01-21 19:32:41 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-3: set socket timeout to 5000
+2018-01-21 19:32:41 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:32:41 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:32:41 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:32:41 DEBUG headers:133 - http-outgoing-3 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:32:41 DEBUG headers:136 - http-outgoing-3 >> Host: priceticker.exactpro.com
+2018-01-21 19:32:41 DEBUG headers:136 - http-outgoing-3 >> Connection: Keep-Alive
+2018-01-21 19:32:41 DEBUG headers:136 - http-outgoing-3 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:32:41 DEBUG headers:136 - http-outgoing-3 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:32:41 DEBUG wire:73 - http-outgoing-3 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:32:41 DEBUG wire:73 - http-outgoing-3 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:32:41 DEBUG wire:73 - http-outgoing-3 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:32:41 DEBUG wire:73 - http-outgoing-3 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:32:41 DEBUG wire:73 - http-outgoing-3 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:32:41 DEBUG wire:73 - http-outgoing-3 >> "[\r][\n]"
+2018-01-21 19:32:41 DEBUG wire:73 - http-outgoing-3 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:32:41 DEBUG wire:73 - http-outgoing-3 << "Server: nginx[\r][\n]"
+2018-01-21 19:32:41 DEBUG wire:73 - http-outgoing-3 << "Date: Sun, 21 Jan 2018 15:33:41 GMT[\r][\n]"
+2018-01-21 19:32:41 DEBUG wire:73 - http-outgoing-3 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:32:41 DEBUG wire:73 - http-outgoing-3 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:32:41 DEBUG wire:73 - http-outgoing-3 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:32:41 DEBUG wire:73 - http-outgoing-3 << "[\r][\n]"
+2018-01-21 19:32:41 DEBUG wire:87 - http-outgoing-3 << "{"price":242.70236}"
+2018-01-21 19:32:41 DEBUG headers:122 - http-outgoing-3 << HTTP/1.1 200 OK
+2018-01-21 19:32:41 DEBUG headers:125 - http-outgoing-3 << Server: nginx
+2018-01-21 19:32:41 DEBUG headers:125 - http-outgoing-3 << Date: Sun, 21 Jan 2018 15:33:41 GMT
+2018-01-21 19:32:41 DEBUG headers:125 - http-outgoing-3 << Content-Type: application/json
+2018-01-21 19:32:41 DEBUG headers:125 - http-outgoing-3 << Content-Length: 19
+2018-01-21 19:32:41 DEBUG headers:125 - http-outgoing-3 << Connection: keep-alive
+2018-01-21 19:32:41 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:32:41 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:32:41 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 3][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:32:41 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-3: set socket timeout to 0
+2018-01-21 19:32:41 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 3][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:32:41 INFO  ExactProPrice:55 - SB={"price":242.70236},
+2018-01-21 19:32:41 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:32:41 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-3: Close connection
+2018-01-21 19:32:41 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:32:41 INFO  ExactProPrice:63 - RET="{\"price\":242.70236}{\"price\":242.70236}"
+2018-01-21 19:32:55 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:32:55 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:32:55 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:32:55 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 4][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:32:55 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:32:55 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:32:55 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45847<->88.99.184.198:80
+2018-01-21 19:32:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-4: set socket timeout to 5000
+2018-01-21 19:32:55 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:32:55 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:32:55 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:32:55 DEBUG headers:133 - http-outgoing-4 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:32:55 DEBUG headers:136 - http-outgoing-4 >> Host: priceticker.exactpro.com
+2018-01-21 19:32:55 DEBUG headers:136 - http-outgoing-4 >> Connection: Keep-Alive
+2018-01-21 19:32:55 DEBUG headers:136 - http-outgoing-4 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:32:55 DEBUG headers:136 - http-outgoing-4 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:32:55 DEBUG wire:73 - http-outgoing-4 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:32:55 DEBUG wire:73 - http-outgoing-4 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:32:55 DEBUG wire:73 - http-outgoing-4 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:32:55 DEBUG wire:73 - http-outgoing-4 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:32:55 DEBUG wire:73 - http-outgoing-4 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:32:55 DEBUG wire:73 - http-outgoing-4 >> "[\r][\n]"
+2018-01-21 19:32:55 DEBUG wire:73 - http-outgoing-4 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:32:55 DEBUG wire:73 - http-outgoing-4 << "Server: nginx[\r][\n]"
+2018-01-21 19:32:55 DEBUG wire:73 - http-outgoing-4 << "Date: Sun, 21 Jan 2018 15:33:55 GMT[\r][\n]"
+2018-01-21 19:32:55 DEBUG wire:73 - http-outgoing-4 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:32:55 DEBUG wire:73 - http-outgoing-4 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:32:55 DEBUG wire:73 - http-outgoing-4 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:32:55 DEBUG wire:73 - http-outgoing-4 << "[\r][\n]"
+2018-01-21 19:32:55 DEBUG wire:87 - http-outgoing-4 << "{"price":475.10906}"
+2018-01-21 19:32:55 DEBUG headers:122 - http-outgoing-4 << HTTP/1.1 200 OK
+2018-01-21 19:32:55 DEBUG headers:125 - http-outgoing-4 << Server: nginx
+2018-01-21 19:32:55 DEBUG headers:125 - http-outgoing-4 << Date: Sun, 21 Jan 2018 15:33:55 GMT
+2018-01-21 19:32:55 DEBUG headers:125 - http-outgoing-4 << Content-Type: application/json
+2018-01-21 19:32:55 DEBUG headers:125 - http-outgoing-4 << Content-Length: 19
+2018-01-21 19:32:55 DEBUG headers:125 - http-outgoing-4 << Connection: keep-alive
+2018-01-21 19:32:55 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:32:55 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:32:55 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 4][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:32:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-4: set socket timeout to 0
+2018-01-21 19:32:55 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 4][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:32:55 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:32:55 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-4: Close connection
+2018-01-21 19:32:55 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:33:18 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:33:18 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:33:18 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:33:18 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 5][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:33:18 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:33:18 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:33:18 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45850<->88.99.184.198:80
+2018-01-21 19:33:18 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-5: set socket timeout to 5000
+2018-01-21 19:33:18 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:33:18 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:33:18 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:33:18 DEBUG headers:133 - http-outgoing-5 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:33:18 DEBUG headers:136 - http-outgoing-5 >> Host: priceticker.exactpro.com
+2018-01-21 19:33:18 DEBUG headers:136 - http-outgoing-5 >> Connection: Keep-Alive
+2018-01-21 19:33:18 DEBUG headers:136 - http-outgoing-5 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:33:18 DEBUG headers:136 - http-outgoing-5 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:33:18 DEBUG wire:73 - http-outgoing-5 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:33:18 DEBUG wire:73 - http-outgoing-5 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:33:18 DEBUG wire:73 - http-outgoing-5 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:33:18 DEBUG wire:73 - http-outgoing-5 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:33:18 DEBUG wire:73 - http-outgoing-5 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:33:18 DEBUG wire:73 - http-outgoing-5 >> "[\r][\n]"
+2018-01-21 19:33:18 DEBUG wire:73 - http-outgoing-5 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:33:18 DEBUG wire:73 - http-outgoing-5 << "Server: nginx[\r][\n]"
+2018-01-21 19:33:18 DEBUG wire:73 - http-outgoing-5 << "Date: Sun, 21 Jan 2018 15:34:19 GMT[\r][\n]"
+2018-01-21 19:33:18 DEBUG wire:73 - http-outgoing-5 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:33:18 DEBUG wire:73 - http-outgoing-5 << "Content-Length: 18[\r][\n]"
+2018-01-21 19:33:18 DEBUG wire:73 - http-outgoing-5 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:33:18 DEBUG wire:73 - http-outgoing-5 << "[\r][\n]"
+2018-01-21 19:33:18 DEBUG wire:87 - http-outgoing-5 << "{"price":20.36363}"
+2018-01-21 19:33:18 DEBUG headers:122 - http-outgoing-5 << HTTP/1.1 200 OK
+2018-01-21 19:33:18 DEBUG headers:125 - http-outgoing-5 << Server: nginx
+2018-01-21 19:33:18 DEBUG headers:125 - http-outgoing-5 << Date: Sun, 21 Jan 2018 15:34:19 GMT
+2018-01-21 19:33:18 DEBUG headers:125 - http-outgoing-5 << Content-Type: application/json
+2018-01-21 19:33:18 DEBUG headers:125 - http-outgoing-5 << Content-Length: 18
+2018-01-21 19:33:18 DEBUG headers:125 - http-outgoing-5 << Connection: keep-alive
+2018-01-21 19:33:18 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:33:18 INFO  ExactProServlet:43 - Length=18
+2018-01-21 19:33:18 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 5][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:33:18 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-5: set socket timeout to 0
+2018-01-21 19:33:18 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 5][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:33:18 INFO  ExactProPrice:55 - SB={"price":20.36363},
+2018-01-21 19:33:18 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:33:18 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-5: Close connection
+2018-01-21 19:33:18 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:33:18 INFO  ExactProPrice:63 - RET="{\"price\":20.36363}{\"price\":20.36363}"
+2018-01-21 19:33:55 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:33:55 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:33:55 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:33:55 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 6][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:33:55 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:33:55 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:33:55 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45852<->88.99.184.198:80
+2018-01-21 19:33:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-6: set socket timeout to 5000
+2018-01-21 19:33:55 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:33:55 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:33:55 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:33:55 DEBUG headers:133 - http-outgoing-6 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:33:55 DEBUG headers:136 - http-outgoing-6 >> Host: priceticker.exactpro.com
+2018-01-21 19:33:55 DEBUG headers:136 - http-outgoing-6 >> Connection: Keep-Alive
+2018-01-21 19:33:55 DEBUG headers:136 - http-outgoing-6 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:33:55 DEBUG headers:136 - http-outgoing-6 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-6 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-6 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-6 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-6 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-6 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-6 >> "[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-6 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-6 << "Server: nginx[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-6 << "Date: Sun, 21 Jan 2018 15:34:55 GMT[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-6 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-6 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-6 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-6 << "[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:87 - http-outgoing-6 << "{"price":219.93721}"
+2018-01-21 19:33:55 DEBUG headers:122 - http-outgoing-6 << HTTP/1.1 200 OK
+2018-01-21 19:33:55 DEBUG headers:125 - http-outgoing-6 << Server: nginx
+2018-01-21 19:33:55 DEBUG headers:125 - http-outgoing-6 << Date: Sun, 21 Jan 2018 15:34:55 GMT
+2018-01-21 19:33:55 DEBUG headers:125 - http-outgoing-6 << Content-Type: application/json
+2018-01-21 19:33:55 DEBUG headers:125 - http-outgoing-6 << Content-Length: 19
+2018-01-21 19:33:55 DEBUG headers:125 - http-outgoing-6 << Connection: keep-alive
+2018-01-21 19:33:55 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:33:55 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:33:55 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 6][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:33:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-6: set socket timeout to 0
+2018-01-21 19:33:55 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 6][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:33:55 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:33:55 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-6: Close connection
+2018-01-21 19:33:55 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:33:55 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:33:55 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:33:55 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:33:55 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 7][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:33:55 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:33:55 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:33:55 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45853<->88.99.184.198:80
+2018-01-21 19:33:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-7: set socket timeout to 5000
+2018-01-21 19:33:55 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:33:55 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:33:55 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:33:55 DEBUG headers:133 - http-outgoing-7 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:33:55 DEBUG headers:136 - http-outgoing-7 >> Host: priceticker.exactpro.com
+2018-01-21 19:33:55 DEBUG headers:136 - http-outgoing-7 >> Connection: Keep-Alive
+2018-01-21 19:33:55 DEBUG headers:136 - http-outgoing-7 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:33:55 DEBUG headers:136 - http-outgoing-7 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-7 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-7 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-7 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-7 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-7 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-7 >> "[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-7 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-7 << "Server: nginx[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-7 << "Date: Sun, 21 Jan 2018 15:34:56 GMT[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-7 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-7 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-7 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:73 - http-outgoing-7 << "[\r][\n]"
+2018-01-21 19:33:55 DEBUG wire:87 - http-outgoing-7 << "{"price":219.93721}"
+2018-01-21 19:33:55 DEBUG headers:122 - http-outgoing-7 << HTTP/1.1 200 OK
+2018-01-21 19:33:55 DEBUG headers:125 - http-outgoing-7 << Server: nginx
+2018-01-21 19:33:55 DEBUG headers:125 - http-outgoing-7 << Date: Sun, 21 Jan 2018 15:34:56 GMT
+2018-01-21 19:33:55 DEBUG headers:125 - http-outgoing-7 << Content-Type: application/json
+2018-01-21 19:33:55 DEBUG headers:125 - http-outgoing-7 << Content-Length: 19
+2018-01-21 19:33:55 DEBUG headers:125 - http-outgoing-7 << Connection: keep-alive
+2018-01-21 19:33:55 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:33:55 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:33:55 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 7][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:33:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-7: set socket timeout to 0
+2018-01-21 19:33:55 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 7][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:33:55 INFO  ExactProPrice:55 - SB={"price":219.93721},
+2018-01-21 19:33:55 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:33:55 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-7: Close connection
+2018-01-21 19:33:55 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:33:55 INFO  ExactProPrice:63 - RET="{\"price\":219.93721}{\"price\":219.93721}"
+2018-01-21 19:34:32 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:34:32 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:34:32 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:34:32 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 8][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:34:32 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:34:32 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:34:32 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45854<->88.99.184.198:80
+2018-01-21 19:34:32 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-8: set socket timeout to 5000
+2018-01-21 19:34:32 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:34:32 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:34:32 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:34:32 DEBUG headers:133 - http-outgoing-8 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:34:32 DEBUG headers:136 - http-outgoing-8 >> Host: priceticker.exactpro.com
+2018-01-21 19:34:32 DEBUG headers:136 - http-outgoing-8 >> Connection: Keep-Alive
+2018-01-21 19:34:32 DEBUG headers:136 - http-outgoing-8 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:34:32 DEBUG headers:136 - http-outgoing-8 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:34:32 DEBUG wire:73 - http-outgoing-8 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:34:32 DEBUG wire:73 - http-outgoing-8 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:34:32 DEBUG wire:73 - http-outgoing-8 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:34:32 DEBUG wire:73 - http-outgoing-8 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:34:32 DEBUG wire:73 - http-outgoing-8 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:34:32 DEBUG wire:73 - http-outgoing-8 >> "[\r][\n]"
+2018-01-21 19:34:33 DEBUG wire:73 - http-outgoing-8 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:34:33 DEBUG wire:73 - http-outgoing-8 << "Server: nginx[\r][\n]"
+2018-01-21 19:34:33 DEBUG wire:73 - http-outgoing-8 << "Date: Sun, 21 Jan 2018 15:35:33 GMT[\r][\n]"
+2018-01-21 19:34:33 DEBUG wire:73 - http-outgoing-8 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:34:33 DEBUG wire:73 - http-outgoing-8 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:34:33 DEBUG wire:73 - http-outgoing-8 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:34:33 DEBUG wire:73 - http-outgoing-8 << "[\r][\n]"
+2018-01-21 19:34:33 DEBUG wire:87 - http-outgoing-8 << "{"price":314.48672}"
+2018-01-21 19:34:33 DEBUG headers:122 - http-outgoing-8 << HTTP/1.1 200 OK
+2018-01-21 19:34:33 DEBUG headers:125 - http-outgoing-8 << Server: nginx
+2018-01-21 19:34:33 DEBUG headers:125 - http-outgoing-8 << Date: Sun, 21 Jan 2018 15:35:33 GMT
+2018-01-21 19:34:33 DEBUG headers:125 - http-outgoing-8 << Content-Type: application/json
+2018-01-21 19:34:33 DEBUG headers:125 - http-outgoing-8 << Content-Length: 19
+2018-01-21 19:34:33 DEBUG headers:125 - http-outgoing-8 << Connection: keep-alive
+2018-01-21 19:34:33 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:34:33 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:34:33 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 8][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:34:33 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-8: set socket timeout to 0
+2018-01-21 19:34:33 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 8][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:34:33 INFO  ExactProPrice:55 - SB={"price":314.48672},
+2018-01-21 19:34:33 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:34:33 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-8: Close connection
+2018-01-21 19:34:33 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:34:33 INFO  ExactProPrice:63 - RET="{\"price\":314.48672}{\"price\":314.48672}"
+2018-01-21 19:34:55 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:34:55 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:34:55 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:34:55 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 9][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:34:55 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:34:55 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:34:55 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45855<->88.99.184.198:80
+2018-01-21 19:34:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-9: set socket timeout to 5000
+2018-01-21 19:34:55 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:34:55 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:34:55 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:34:55 DEBUG headers:133 - http-outgoing-9 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:34:55 DEBUG headers:136 - http-outgoing-9 >> Host: priceticker.exactpro.com
+2018-01-21 19:34:55 DEBUG headers:136 - http-outgoing-9 >> Connection: Keep-Alive
+2018-01-21 19:34:55 DEBUG headers:136 - http-outgoing-9 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:34:55 DEBUG headers:136 - http-outgoing-9 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:34:55 DEBUG wire:73 - http-outgoing-9 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:34:55 DEBUG wire:73 - http-outgoing-9 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:34:55 DEBUG wire:73 - http-outgoing-9 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:34:55 DEBUG wire:73 - http-outgoing-9 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:34:55 DEBUG wire:73 - http-outgoing-9 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:34:55 DEBUG wire:73 - http-outgoing-9 >> "[\r][\n]"
+2018-01-21 19:34:55 DEBUG wire:73 - http-outgoing-9 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:34:55 DEBUG wire:73 - http-outgoing-9 << "Server: nginx[\r][\n]"
+2018-01-21 19:34:55 DEBUG wire:73 - http-outgoing-9 << "Date: Sun, 21 Jan 2018 15:35:55 GMT[\r][\n]"
+2018-01-21 19:34:55 DEBUG wire:73 - http-outgoing-9 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:34:55 DEBUG wire:73 - http-outgoing-9 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:34:55 DEBUG wire:73 - http-outgoing-9 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:34:55 DEBUG wire:73 - http-outgoing-9 << "[\r][\n]"
+2018-01-21 19:34:55 DEBUG wire:87 - http-outgoing-9 << "{"price":265.66544}"
+2018-01-21 19:34:55 DEBUG headers:122 - http-outgoing-9 << HTTP/1.1 200 OK
+2018-01-21 19:34:55 DEBUG headers:125 - http-outgoing-9 << Server: nginx
+2018-01-21 19:34:55 DEBUG headers:125 - http-outgoing-9 << Date: Sun, 21 Jan 2018 15:35:55 GMT
+2018-01-21 19:34:55 DEBUG headers:125 - http-outgoing-9 << Content-Type: application/json
+2018-01-21 19:34:55 DEBUG headers:125 - http-outgoing-9 << Content-Length: 19
+2018-01-21 19:34:55 DEBUG headers:125 - http-outgoing-9 << Connection: keep-alive
+2018-01-21 19:34:55 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:34:55 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:34:55 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 9][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:34:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-9: set socket timeout to 0
+2018-01-21 19:34:55 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 9][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:34:55 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:34:55 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-9: Close connection
+2018-01-21 19:34:55 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:35:10 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:35:10 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:35:10 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:35:10 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 10][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:35:10 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:35:10 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:35:10 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45856<->88.99.184.198:80
+2018-01-21 19:35:10 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-10: set socket timeout to 5000
+2018-01-21 19:35:10 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:35:10 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:35:10 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:35:10 DEBUG headers:133 - http-outgoing-10 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:35:10 DEBUG headers:136 - http-outgoing-10 >> Host: priceticker.exactpro.com
+2018-01-21 19:35:10 DEBUG headers:136 - http-outgoing-10 >> Connection: Keep-Alive
+2018-01-21 19:35:10 DEBUG headers:136 - http-outgoing-10 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:35:10 DEBUG headers:136 - http-outgoing-10 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:35:10 DEBUG wire:73 - http-outgoing-10 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:35:10 DEBUG wire:73 - http-outgoing-10 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:35:10 DEBUG wire:73 - http-outgoing-10 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:35:10 DEBUG wire:73 - http-outgoing-10 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:35:10 DEBUG wire:73 - http-outgoing-10 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:35:10 DEBUG wire:73 - http-outgoing-10 >> "[\r][\n]"
+2018-01-21 19:35:10 DEBUG wire:73 - http-outgoing-10 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:35:10 DEBUG wire:73 - http-outgoing-10 << "Server: nginx[\r][\n]"
+2018-01-21 19:35:10 DEBUG wire:73 - http-outgoing-10 << "Date: Sun, 21 Jan 2018 15:36:10 GMT[\r][\n]"
+2018-01-21 19:35:10 DEBUG wire:73 - http-outgoing-10 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:35:10 DEBUG wire:73 - http-outgoing-10 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:35:10 DEBUG wire:73 - http-outgoing-10 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:35:10 DEBUG wire:73 - http-outgoing-10 << "[\r][\n]"
+2018-01-21 19:35:10 DEBUG wire:87 - http-outgoing-10 << "{"price":394.05836}"
+2018-01-21 19:35:10 DEBUG headers:122 - http-outgoing-10 << HTTP/1.1 200 OK
+2018-01-21 19:35:10 DEBUG headers:125 - http-outgoing-10 << Server: nginx
+2018-01-21 19:35:10 DEBUG headers:125 - http-outgoing-10 << Date: Sun, 21 Jan 2018 15:36:10 GMT
+2018-01-21 19:35:10 DEBUG headers:125 - http-outgoing-10 << Content-Type: application/json
+2018-01-21 19:35:10 DEBUG headers:125 - http-outgoing-10 << Content-Length: 19
+2018-01-21 19:35:10 DEBUG headers:125 - http-outgoing-10 << Connection: keep-alive
+2018-01-21 19:35:10 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:35:10 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:35:10 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 10][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:35:10 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-10: set socket timeout to 0
+2018-01-21 19:35:10 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 10][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:35:10 INFO  ExactProPrice:55 - SB={"price":394.05836},
+2018-01-21 19:35:10 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:35:10 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-10: Close connection
+2018-01-21 19:35:10 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:35:10 INFO  ExactProPrice:63 - RET="{\"price\":394.05836}{\"price\":394.05836}"
+2018-01-21 19:35:47 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:35:47 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:35:47 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:35:47 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 11][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:35:47 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:35:47 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:35:47 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45857<->88.99.184.198:80
+2018-01-21 19:35:47 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-11: set socket timeout to 5000
+2018-01-21 19:35:47 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:35:47 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:35:47 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:35:47 DEBUG headers:133 - http-outgoing-11 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:35:47 DEBUG headers:136 - http-outgoing-11 >> Host: priceticker.exactpro.com
+2018-01-21 19:35:47 DEBUG headers:136 - http-outgoing-11 >> Connection: Keep-Alive
+2018-01-21 19:35:47 DEBUG headers:136 - http-outgoing-11 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:35:47 DEBUG headers:136 - http-outgoing-11 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:35:47 DEBUG wire:73 - http-outgoing-11 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:35:47 DEBUG wire:73 - http-outgoing-11 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:35:47 DEBUG wire:73 - http-outgoing-11 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:35:47 DEBUG wire:73 - http-outgoing-11 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:35:47 DEBUG wire:73 - http-outgoing-11 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:35:47 DEBUG wire:73 - http-outgoing-11 >> "[\r][\n]"
+2018-01-21 19:35:47 DEBUG wire:73 - http-outgoing-11 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:35:47 DEBUG wire:73 - http-outgoing-11 << "Server: nginx[\r][\n]"
+2018-01-21 19:35:47 DEBUG wire:73 - http-outgoing-11 << "Date: Sun, 21 Jan 2018 15:36:47 GMT[\r][\n]"
+2018-01-21 19:35:47 DEBUG wire:73 - http-outgoing-11 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:35:47 DEBUG wire:73 - http-outgoing-11 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:35:47 DEBUG wire:73 - http-outgoing-11 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:35:47 DEBUG wire:73 - http-outgoing-11 << "[\r][\n]"
+2018-01-21 19:35:47 DEBUG wire:87 - http-outgoing-11 << "{"price":366.48786}"
+2018-01-21 19:35:47 DEBUG headers:122 - http-outgoing-11 << HTTP/1.1 200 OK
+2018-01-21 19:35:47 DEBUG headers:125 - http-outgoing-11 << Server: nginx
+2018-01-21 19:35:47 DEBUG headers:125 - http-outgoing-11 << Date: Sun, 21 Jan 2018 15:36:47 GMT
+2018-01-21 19:35:47 DEBUG headers:125 - http-outgoing-11 << Content-Type: application/json
+2018-01-21 19:35:47 DEBUG headers:125 - http-outgoing-11 << Content-Length: 19
+2018-01-21 19:35:47 DEBUG headers:125 - http-outgoing-11 << Connection: keep-alive
+2018-01-21 19:35:47 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:35:47 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:35:47 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 11][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:35:47 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-11: set socket timeout to 0
+2018-01-21 19:35:47 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 11][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:35:47 INFO  ExactProPrice:55 - SB={"price":366.48786},
+2018-01-21 19:35:47 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:35:47 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-11: Close connection
+2018-01-21 19:35:47 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:35:47 INFO  ExactProPrice:63 - RET="{\"price\":366.48786}{\"price\":366.48786}"
+2018-01-21 19:35:55 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:35:55 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:35:55 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:35:55 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 12][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:35:55 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:35:55 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:35:55 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45863<->88.99.184.198:80
+2018-01-21 19:35:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-12: set socket timeout to 5000
+2018-01-21 19:35:55 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:35:55 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:35:55 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:35:55 DEBUG headers:133 - http-outgoing-12 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:35:55 DEBUG headers:136 - http-outgoing-12 >> Host: priceticker.exactpro.com
+2018-01-21 19:35:55 DEBUG headers:136 - http-outgoing-12 >> Connection: Keep-Alive
+2018-01-21 19:35:55 DEBUG headers:136 - http-outgoing-12 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:35:55 DEBUG headers:136 - http-outgoing-12 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:35:55 DEBUG wire:73 - http-outgoing-12 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:35:55 DEBUG wire:73 - http-outgoing-12 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:35:55 DEBUG wire:73 - http-outgoing-12 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:35:55 DEBUG wire:73 - http-outgoing-12 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:35:55 DEBUG wire:73 - http-outgoing-12 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:35:55 DEBUG wire:73 - http-outgoing-12 >> "[\r][\n]"
+2018-01-21 19:35:55 DEBUG wire:73 - http-outgoing-12 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:35:55 DEBUG wire:73 - http-outgoing-12 << "Server: nginx[\r][\n]"
+2018-01-21 19:35:55 DEBUG wire:73 - http-outgoing-12 << "Date: Sun, 21 Jan 2018 15:36:55 GMT[\r][\n]"
+2018-01-21 19:35:55 DEBUG wire:73 - http-outgoing-12 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:35:55 DEBUG wire:73 - http-outgoing-12 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:35:55 DEBUG wire:73 - http-outgoing-12 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:35:55 DEBUG wire:73 - http-outgoing-12 << "[\r][\n]"
+2018-01-21 19:35:55 DEBUG wire:87 - http-outgoing-12 << "{"price":366.48786}"
+2018-01-21 19:35:55 DEBUG headers:122 - http-outgoing-12 << HTTP/1.1 200 OK
+2018-01-21 19:35:55 DEBUG headers:125 - http-outgoing-12 << Server: nginx
+2018-01-21 19:35:55 DEBUG headers:125 - http-outgoing-12 << Date: Sun, 21 Jan 2018 15:36:55 GMT
+2018-01-21 19:35:55 DEBUG headers:125 - http-outgoing-12 << Content-Type: application/json
+2018-01-21 19:35:55 DEBUG headers:125 - http-outgoing-12 << Content-Length: 19
+2018-01-21 19:35:55 DEBUG headers:125 - http-outgoing-12 << Connection: keep-alive
+2018-01-21 19:35:55 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:35:55 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:35:55 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 12][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:35:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-12: set socket timeout to 0
+2018-01-21 19:35:55 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 12][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:35:55 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:35:55 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-12: Close connection
+2018-01-21 19:35:55 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:36:24 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:36:24 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:36:24 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:36:24 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 13][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:36:24 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:36:24 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:36:24 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45864<->88.99.184.198:80
+2018-01-21 19:36:24 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-13: set socket timeout to 5000
+2018-01-21 19:36:24 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:36:24 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:36:24 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:36:24 DEBUG headers:133 - http-outgoing-13 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:36:24 DEBUG headers:136 - http-outgoing-13 >> Host: priceticker.exactpro.com
+2018-01-21 19:36:24 DEBUG headers:136 - http-outgoing-13 >> Connection: Keep-Alive
+2018-01-21 19:36:24 DEBUG headers:136 - http-outgoing-13 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:36:24 DEBUG headers:136 - http-outgoing-13 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:36:24 DEBUG wire:73 - http-outgoing-13 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:36:24 DEBUG wire:73 - http-outgoing-13 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:36:24 DEBUG wire:73 - http-outgoing-13 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:36:24 DEBUG wire:73 - http-outgoing-13 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:36:24 DEBUG wire:73 - http-outgoing-13 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:36:24 DEBUG wire:73 - http-outgoing-13 >> "[\r][\n]"
+2018-01-21 19:36:24 DEBUG wire:73 - http-outgoing-13 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:36:24 DEBUG wire:73 - http-outgoing-13 << "Server: nginx[\r][\n]"
+2018-01-21 19:36:24 DEBUG wire:73 - http-outgoing-13 << "Date: Sun, 21 Jan 2018 15:37:24 GMT[\r][\n]"
+2018-01-21 19:36:24 DEBUG wire:73 - http-outgoing-13 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:36:24 DEBUG wire:73 - http-outgoing-13 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:36:24 DEBUG wire:73 - http-outgoing-13 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:36:24 DEBUG wire:73 - http-outgoing-13 << "[\r][\n]"
+2018-01-21 19:36:24 DEBUG wire:87 - http-outgoing-13 << "{"price":179.31477}"
+2018-01-21 19:36:24 DEBUG headers:122 - http-outgoing-13 << HTTP/1.1 200 OK
+2018-01-21 19:36:24 DEBUG headers:125 - http-outgoing-13 << Server: nginx
+2018-01-21 19:36:24 DEBUG headers:125 - http-outgoing-13 << Date: Sun, 21 Jan 2018 15:37:24 GMT
+2018-01-21 19:36:24 DEBUG headers:125 - http-outgoing-13 << Content-Type: application/json
+2018-01-21 19:36:24 DEBUG headers:125 - http-outgoing-13 << Content-Length: 19
+2018-01-21 19:36:24 DEBUG headers:125 - http-outgoing-13 << Connection: keep-alive
+2018-01-21 19:36:24 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:36:24 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:36:24 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 13][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:36:24 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-13: set socket timeout to 0
+2018-01-21 19:36:24 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 13][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:36:24 INFO  ExactProPrice:55 - SB={"price":179.31477},
+2018-01-21 19:36:24 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:36:24 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-13: Close connection
+2018-01-21 19:36:24 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:36:24 INFO  ExactProPrice:63 - RET="{\"price\":179.31477}{\"price\":179.31477}"
+2018-01-21 19:36:55 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:36:55 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:36:55 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:36:55 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 14][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:36:55 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:36:55 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:36:55 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45865<->88.99.184.198:80
+2018-01-21 19:36:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-14: set socket timeout to 5000
+2018-01-21 19:36:55 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:36:55 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:36:55 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:36:55 DEBUG headers:133 - http-outgoing-14 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:36:55 DEBUG headers:136 - http-outgoing-14 >> Host: priceticker.exactpro.com
+2018-01-21 19:36:55 DEBUG headers:136 - http-outgoing-14 >> Connection: Keep-Alive
+2018-01-21 19:36:55 DEBUG headers:136 - http-outgoing-14 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:36:55 DEBUG headers:136 - http-outgoing-14 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:36:55 DEBUG wire:73 - http-outgoing-14 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:36:55 DEBUG wire:73 - http-outgoing-14 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:36:55 DEBUG wire:73 - http-outgoing-14 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:36:55 DEBUG wire:73 - http-outgoing-14 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:36:55 DEBUG wire:73 - http-outgoing-14 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:36:55 DEBUG wire:73 - http-outgoing-14 >> "[\r][\n]"
+2018-01-21 19:36:55 DEBUG wire:73 - http-outgoing-14 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:36:55 DEBUG wire:73 - http-outgoing-14 << "Server: nginx[\r][\n]"
+2018-01-21 19:36:55 DEBUG wire:73 - http-outgoing-14 << "Date: Sun, 21 Jan 2018 15:37:55 GMT[\r][\n]"
+2018-01-21 19:36:55 DEBUG wire:73 - http-outgoing-14 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:36:55 DEBUG wire:73 - http-outgoing-14 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:36:55 DEBUG wire:73 - http-outgoing-14 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:36:55 DEBUG wire:73 - http-outgoing-14 << "[\r][\n]"
+2018-01-21 19:36:55 DEBUG wire:87 - http-outgoing-14 << "{"price":407.52854}"
+2018-01-21 19:36:55 DEBUG headers:122 - http-outgoing-14 << HTTP/1.1 200 OK
+2018-01-21 19:36:55 DEBUG headers:125 - http-outgoing-14 << Server: nginx
+2018-01-21 19:36:55 DEBUG headers:125 - http-outgoing-14 << Date: Sun, 21 Jan 2018 15:37:55 GMT
+2018-01-21 19:36:55 DEBUG headers:125 - http-outgoing-14 << Content-Type: application/json
+2018-01-21 19:36:55 DEBUG headers:125 - http-outgoing-14 << Content-Length: 19
+2018-01-21 19:36:55 DEBUG headers:125 - http-outgoing-14 << Connection: keep-alive
+2018-01-21 19:36:55 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:36:55 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:36:55 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 14][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:36:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-14: set socket timeout to 0
+2018-01-21 19:36:55 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 14][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:36:55 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:36:55 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-14: Close connection
+2018-01-21 19:36:55 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:37:01 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:37:01 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:37:01 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:37:01 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 15][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:37:01 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:37:01 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:37:01 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45866<->88.99.184.198:80
+2018-01-21 19:37:01 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-15: set socket timeout to 5000
+2018-01-21 19:37:01 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:37:01 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:37:01 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:37:01 DEBUG headers:133 - http-outgoing-15 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:37:01 DEBUG headers:136 - http-outgoing-15 >> Host: priceticker.exactpro.com
+2018-01-21 19:37:01 DEBUG headers:136 - http-outgoing-15 >> Connection: Keep-Alive
+2018-01-21 19:37:01 DEBUG headers:136 - http-outgoing-15 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:37:01 DEBUG headers:136 - http-outgoing-15 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:37:01 DEBUG wire:73 - http-outgoing-15 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:37:01 DEBUG wire:73 - http-outgoing-15 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:37:01 DEBUG wire:73 - http-outgoing-15 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:37:01 DEBUG wire:73 - http-outgoing-15 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:37:01 DEBUG wire:73 - http-outgoing-15 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:37:01 DEBUG wire:73 - http-outgoing-15 >> "[\r][\n]"
+2018-01-21 19:37:01 DEBUG wire:73 - http-outgoing-15 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:37:01 DEBUG wire:73 - http-outgoing-15 << "Server: nginx[\r][\n]"
+2018-01-21 19:37:01 DEBUG wire:73 - http-outgoing-15 << "Date: Sun, 21 Jan 2018 15:38:02 GMT[\r][\n]"
+2018-01-21 19:37:01 DEBUG wire:73 - http-outgoing-15 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:37:01 DEBUG wire:73 - http-outgoing-15 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:37:01 DEBUG wire:73 - http-outgoing-15 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:37:01 DEBUG wire:73 - http-outgoing-15 << "[\r][\n]"
+2018-01-21 19:37:01 DEBUG wire:87 - http-outgoing-15 << "{"price":238.05605}"
+2018-01-21 19:37:01 DEBUG headers:122 - http-outgoing-15 << HTTP/1.1 200 OK
+2018-01-21 19:37:01 DEBUG headers:125 - http-outgoing-15 << Server: nginx
+2018-01-21 19:37:01 DEBUG headers:125 - http-outgoing-15 << Date: Sun, 21 Jan 2018 15:38:02 GMT
+2018-01-21 19:37:01 DEBUG headers:125 - http-outgoing-15 << Content-Type: application/json
+2018-01-21 19:37:01 DEBUG headers:125 - http-outgoing-15 << Content-Length: 19
+2018-01-21 19:37:01 DEBUG headers:125 - http-outgoing-15 << Connection: keep-alive
+2018-01-21 19:37:01 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:37:01 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:37:01 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 15][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:37:01 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-15: set socket timeout to 0
+2018-01-21 19:37:01 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 15][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:37:01 INFO  ExactProPrice:55 - SB={"price":238.05605},
+2018-01-21 19:37:01 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:37:01 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-15: Close connection
+2018-01-21 19:37:01 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:37:01 INFO  ExactProPrice:63 - RET="{\"price\":238.05605}{\"price\":238.05605}"
+2018-01-21 19:37:38 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:37:38 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:37:38 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:37:38 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 16][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:37:38 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:37:38 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:37:38 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45867<->88.99.184.198:80
+2018-01-21 19:37:38 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-16: set socket timeout to 5000
+2018-01-21 19:37:38 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:37:38 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:37:38 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:37:38 DEBUG headers:133 - http-outgoing-16 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:37:38 DEBUG headers:136 - http-outgoing-16 >> Host: priceticker.exactpro.com
+2018-01-21 19:37:38 DEBUG headers:136 - http-outgoing-16 >> Connection: Keep-Alive
+2018-01-21 19:37:38 DEBUG headers:136 - http-outgoing-16 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:37:38 DEBUG headers:136 - http-outgoing-16 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:37:38 DEBUG wire:73 - http-outgoing-16 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:37:38 DEBUG wire:73 - http-outgoing-16 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:37:38 DEBUG wire:73 - http-outgoing-16 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:37:38 DEBUG wire:73 - http-outgoing-16 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:37:38 DEBUG wire:73 - http-outgoing-16 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:37:38 DEBUG wire:73 - http-outgoing-16 >> "[\r][\n]"
+2018-01-21 19:37:38 DEBUG wire:73 - http-outgoing-16 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:37:38 DEBUG wire:73 - http-outgoing-16 << "Server: nginx[\r][\n]"
+2018-01-21 19:37:38 DEBUG wire:73 - http-outgoing-16 << "Date: Sun, 21 Jan 2018 15:38:39 GMT[\r][\n]"
+2018-01-21 19:37:38 DEBUG wire:73 - http-outgoing-16 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:37:38 DEBUG wire:73 - http-outgoing-16 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:37:38 DEBUG wire:73 - http-outgoing-16 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:37:38 DEBUG wire:73 - http-outgoing-16 << "[\r][\n]"
+2018-01-21 19:37:38 DEBUG wire:87 - http-outgoing-16 << "{"price":434.16854}"
+2018-01-21 19:37:38 DEBUG headers:122 - http-outgoing-16 << HTTP/1.1 200 OK
+2018-01-21 19:37:38 DEBUG headers:125 - http-outgoing-16 << Server: nginx
+2018-01-21 19:37:38 DEBUG headers:125 - http-outgoing-16 << Date: Sun, 21 Jan 2018 15:38:39 GMT
+2018-01-21 19:37:38 DEBUG headers:125 - http-outgoing-16 << Content-Type: application/json
+2018-01-21 19:37:38 DEBUG headers:125 - http-outgoing-16 << Content-Length: 19
+2018-01-21 19:37:38 DEBUG headers:125 - http-outgoing-16 << Connection: keep-alive
+2018-01-21 19:37:38 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:37:38 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:37:38 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 16][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:37:38 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-16: set socket timeout to 0
+2018-01-21 19:37:38 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 16][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:37:38 INFO  ExactProPrice:55 - SB={"price":434.16854},
+2018-01-21 19:37:38 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:37:38 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-16: Close connection
+2018-01-21 19:37:38 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:37:38 INFO  ExactProPrice:63 - RET="{\"price\":434.16854}{\"price\":434.16854}"
+2018-01-21 19:37:55 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:37:55 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:37:55 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:37:55 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 17][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:37:55 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:37:55 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:37:55 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45868<->88.99.184.198:80
+2018-01-21 19:37:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-17: set socket timeout to 5000
+2018-01-21 19:37:55 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:37:55 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:37:55 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:37:55 DEBUG headers:133 - http-outgoing-17 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:37:55 DEBUG headers:136 - http-outgoing-17 >> Host: priceticker.exactpro.com
+2018-01-21 19:37:55 DEBUG headers:136 - http-outgoing-17 >> Connection: Keep-Alive
+2018-01-21 19:37:55 DEBUG headers:136 - http-outgoing-17 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:37:55 DEBUG headers:136 - http-outgoing-17 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:37:55 DEBUG wire:73 - http-outgoing-17 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:37:55 DEBUG wire:73 - http-outgoing-17 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:37:55 DEBUG wire:73 - http-outgoing-17 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:37:55 DEBUG wire:73 - http-outgoing-17 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:37:55 DEBUG wire:73 - http-outgoing-17 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:37:55 DEBUG wire:73 - http-outgoing-17 >> "[\r][\n]"
+2018-01-21 19:37:55 DEBUG wire:73 - http-outgoing-17 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:37:55 DEBUG wire:73 - http-outgoing-17 << "Server: nginx[\r][\n]"
+2018-01-21 19:37:55 DEBUG wire:73 - http-outgoing-17 << "Date: Sun, 21 Jan 2018 15:38:55 GMT[\r][\n]"
+2018-01-21 19:37:55 DEBUG wire:73 - http-outgoing-17 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:37:55 DEBUG wire:73 - http-outgoing-17 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:37:55 DEBUG wire:73 - http-outgoing-17 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:37:55 DEBUG wire:73 - http-outgoing-17 << "[\r][\n]"
+2018-01-21 19:37:55 DEBUG wire:87 - http-outgoing-17 << "{"price":291.70767}"
+2018-01-21 19:37:55 DEBUG headers:122 - http-outgoing-17 << HTTP/1.1 200 OK
+2018-01-21 19:37:55 DEBUG headers:125 - http-outgoing-17 << Server: nginx
+2018-01-21 19:37:55 DEBUG headers:125 - http-outgoing-17 << Date: Sun, 21 Jan 2018 15:38:55 GMT
+2018-01-21 19:37:55 DEBUG headers:125 - http-outgoing-17 << Content-Type: application/json
+2018-01-21 19:37:55 DEBUG headers:125 - http-outgoing-17 << Content-Length: 19
+2018-01-21 19:37:55 DEBUG headers:125 - http-outgoing-17 << Connection: keep-alive
+2018-01-21 19:37:55 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:37:55 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:37:55 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 17][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:37:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-17: set socket timeout to 0
+2018-01-21 19:37:55 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 17][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:37:55 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:37:55 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-17: Close connection
+2018-01-21 19:37:55 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:38:15 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:38:15 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:38:15 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:38:15 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 18][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:38:15 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:38:15 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:38:16 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45869<->88.99.184.198:80
+2018-01-21 19:38:16 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-18: set socket timeout to 5000
+2018-01-21 19:38:16 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:38:16 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:38:16 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:38:16 DEBUG headers:133 - http-outgoing-18 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:38:16 DEBUG headers:136 - http-outgoing-18 >> Host: priceticker.exactpro.com
+2018-01-21 19:38:16 DEBUG headers:136 - http-outgoing-18 >> Connection: Keep-Alive
+2018-01-21 19:38:16 DEBUG headers:136 - http-outgoing-18 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:38:16 DEBUG headers:136 - http-outgoing-18 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:38:16 DEBUG wire:73 - http-outgoing-18 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:38:16 DEBUG wire:73 - http-outgoing-18 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:38:16 DEBUG wire:73 - http-outgoing-18 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:38:16 DEBUG wire:73 - http-outgoing-18 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:38:16 DEBUG wire:73 - http-outgoing-18 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:38:16 DEBUG wire:73 - http-outgoing-18 >> "[\r][\n]"
+2018-01-21 19:38:16 DEBUG wire:73 - http-outgoing-18 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:38:16 DEBUG wire:73 - http-outgoing-18 << "Server: nginx[\r][\n]"
+2018-01-21 19:38:16 DEBUG wire:73 - http-outgoing-18 << "Date: Sun, 21 Jan 2018 15:39:16 GMT[\r][\n]"
+2018-01-21 19:38:16 DEBUG wire:73 - http-outgoing-18 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:38:16 DEBUG wire:73 - http-outgoing-18 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:38:16 DEBUG wire:73 - http-outgoing-18 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:38:16 DEBUG wire:73 - http-outgoing-18 << "[\r][\n]"
+2018-01-21 19:38:16 DEBUG wire:87 - http-outgoing-18 << "{"price":145.36501}"
+2018-01-21 19:38:16 DEBUG headers:122 - http-outgoing-18 << HTTP/1.1 200 OK
+2018-01-21 19:38:16 DEBUG headers:125 - http-outgoing-18 << Server: nginx
+2018-01-21 19:38:16 DEBUG headers:125 - http-outgoing-18 << Date: Sun, 21 Jan 2018 15:39:16 GMT
+2018-01-21 19:38:16 DEBUG headers:125 - http-outgoing-18 << Content-Type: application/json
+2018-01-21 19:38:16 DEBUG headers:125 - http-outgoing-18 << Content-Length: 19
+2018-01-21 19:38:16 DEBUG headers:125 - http-outgoing-18 << Connection: keep-alive
+2018-01-21 19:38:16 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:38:16 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:38:16 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 18][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:38:16 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-18: set socket timeout to 0
+2018-01-21 19:38:16 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 18][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:38:16 INFO  ExactProPrice:55 - SB={"price":145.36501},
+2018-01-21 19:38:16 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:38:16 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-18: Close connection
+2018-01-21 19:38:16 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:38:16 INFO  ExactProPrice:63 - RET="{\"price\":145.36501}{\"price\":145.36501}"
+2018-01-21 19:38:53 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:38:53 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:38:53 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:38:53 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 19][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:38:53 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:38:53 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:38:53 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45871<->88.99.184.198:80
+2018-01-21 19:38:53 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-19: set socket timeout to 5000
+2018-01-21 19:38:53 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:38:53 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:38:53 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:38:53 DEBUG headers:133 - http-outgoing-19 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:38:53 DEBUG headers:136 - http-outgoing-19 >> Host: priceticker.exactpro.com
+2018-01-21 19:38:53 DEBUG headers:136 - http-outgoing-19 >> Connection: Keep-Alive
+2018-01-21 19:38:53 DEBUG headers:136 - http-outgoing-19 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:38:53 DEBUG headers:136 - http-outgoing-19 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:38:53 DEBUG wire:73 - http-outgoing-19 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:38:53 DEBUG wire:73 - http-outgoing-19 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:38:53 DEBUG wire:73 - http-outgoing-19 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:38:53 DEBUG wire:73 - http-outgoing-19 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:38:53 DEBUG wire:73 - http-outgoing-19 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:38:53 DEBUG wire:73 - http-outgoing-19 >> "[\r][\n]"
+2018-01-21 19:38:53 DEBUG wire:73 - http-outgoing-19 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:38:53 DEBUG wire:73 - http-outgoing-19 << "Server: nginx[\r][\n]"
+2018-01-21 19:38:53 DEBUG wire:73 - http-outgoing-19 << "Date: Sun, 21 Jan 2018 15:39:53 GMT[\r][\n]"
+2018-01-21 19:38:53 DEBUG wire:73 - http-outgoing-19 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:38:53 DEBUG wire:73 - http-outgoing-19 << "Content-Length: 17[\r][\n]"
+2018-01-21 19:38:53 DEBUG wire:73 - http-outgoing-19 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:38:53 DEBUG wire:73 - http-outgoing-19 << "[\r][\n]"
+2018-01-21 19:38:53 DEBUG wire:87 - http-outgoing-19 << "{"price":38.4759}"
+2018-01-21 19:38:53 DEBUG headers:122 - http-outgoing-19 << HTTP/1.1 200 OK
+2018-01-21 19:38:53 DEBUG headers:125 - http-outgoing-19 << Server: nginx
+2018-01-21 19:38:53 DEBUG headers:125 - http-outgoing-19 << Date: Sun, 21 Jan 2018 15:39:53 GMT
+2018-01-21 19:38:53 DEBUG headers:125 - http-outgoing-19 << Content-Type: application/json
+2018-01-21 19:38:53 DEBUG headers:125 - http-outgoing-19 << Content-Length: 17
+2018-01-21 19:38:53 DEBUG headers:125 - http-outgoing-19 << Connection: keep-alive
+2018-01-21 19:38:53 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:38:53 INFO  ExactProServlet:43 - Length=17
+2018-01-21 19:38:53 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 19][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:38:53 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-19: set socket timeout to 0
+2018-01-21 19:38:53 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 19][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:38:53 INFO  ExactProPrice:55 - SB={"price":38.4759},
+2018-01-21 19:38:53 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:38:53 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-19: Close connection
+2018-01-21 19:38:53 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:38:53 INFO  ExactProPrice:63 - RET="{\"price\":38.4759}{\"price\":38.4759}"
+2018-01-21 19:38:55 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:38:55 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:38:55 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:38:55 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 20][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:38:55 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:38:55 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:38:55 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45872<->88.99.184.198:80
+2018-01-21 19:38:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-20: set socket timeout to 5000
+2018-01-21 19:38:55 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:38:55 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:38:55 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:38:55 DEBUG headers:133 - http-outgoing-20 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:38:55 DEBUG headers:136 - http-outgoing-20 >> Host: priceticker.exactpro.com
+2018-01-21 19:38:55 DEBUG headers:136 - http-outgoing-20 >> Connection: Keep-Alive
+2018-01-21 19:38:55 DEBUG headers:136 - http-outgoing-20 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:38:55 DEBUG headers:136 - http-outgoing-20 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:38:55 DEBUG wire:73 - http-outgoing-20 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:38:55 DEBUG wire:73 - http-outgoing-20 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:38:55 DEBUG wire:73 - http-outgoing-20 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:38:55 DEBUG wire:73 - http-outgoing-20 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:38:55 DEBUG wire:73 - http-outgoing-20 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:38:55 DEBUG wire:73 - http-outgoing-20 >> "[\r][\n]"
+2018-01-21 19:38:55 DEBUG wire:73 - http-outgoing-20 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:38:55 DEBUG wire:73 - http-outgoing-20 << "Server: nginx[\r][\n]"
+2018-01-21 19:38:55 DEBUG wire:73 - http-outgoing-20 << "Date: Sun, 21 Jan 2018 15:39:55 GMT[\r][\n]"
+2018-01-21 19:38:55 DEBUG wire:73 - http-outgoing-20 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:38:55 DEBUG wire:73 - http-outgoing-20 << "Content-Length: 17[\r][\n]"
+2018-01-21 19:38:55 DEBUG wire:73 - http-outgoing-20 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:38:55 DEBUG wire:73 - http-outgoing-20 << "[\r][\n]"
+2018-01-21 19:38:55 DEBUG wire:87 - http-outgoing-20 << "{"price":38.4759}"
+2018-01-21 19:38:55 DEBUG headers:122 - http-outgoing-20 << HTTP/1.1 200 OK
+2018-01-21 19:38:55 DEBUG headers:125 - http-outgoing-20 << Server: nginx
+2018-01-21 19:38:55 DEBUG headers:125 - http-outgoing-20 << Date: Sun, 21 Jan 2018 15:39:55 GMT
+2018-01-21 19:38:55 DEBUG headers:125 - http-outgoing-20 << Content-Type: application/json
+2018-01-21 19:38:55 DEBUG headers:125 - http-outgoing-20 << Content-Length: 17
+2018-01-21 19:38:55 DEBUG headers:125 - http-outgoing-20 << Connection: keep-alive
+2018-01-21 19:38:55 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:38:55 INFO  ExactProServlet:43 - Length=17
+2018-01-21 19:38:55 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 20][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:38:55 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-20: set socket timeout to 0
+2018-01-21 19:38:55 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 20][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:38:55 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:38:55 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-20: Close connection
+2018-01-21 19:38:55 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:39:30 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2018-01-21 19:39:30 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2018-01-21 19:39:30 DEBUG PoolingHttpClientConnectionManager:265 - Connection request: [route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2018-01-21 19:39:30 DEBUG PoolingHttpClientConnectionManager:309 - Connection leased: [id: 21][route: {}->http://priceticker.exactpro.com:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:39:30 DEBUG MainClientExec:235 - Opening connection {}->http://priceticker.exactpro.com:80
+2018-01-21 19:39:30 DEBUG DefaultHttpClientConnectionOperator:139 - Connecting to priceticker.exactpro.com/88.99.184.198:80
+2018-01-21 19:39:30 DEBUG DefaultHttpClientConnectionOperator:146 - Connection established 192.168.0.2:45873<->88.99.184.198:80
+2018-01-21 19:39:30 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-21: set socket timeout to 5000
+2018-01-21 19:39:30 DEBUG MainClientExec:256 - Executing request GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:39:30 DEBUG MainClientExec:261 - Target auth state: UNCHALLENGED
+2018-01-21 19:39:30 DEBUG MainClientExec:267 - Proxy auth state: UNCHALLENGED
+2018-01-21 19:39:30 DEBUG headers:133 - http-outgoing-21 >> GET /RestInstruments/json/price?id=10 HTTP/1.1
+2018-01-21 19:39:30 DEBUG headers:136 - http-outgoing-21 >> Host: priceticker.exactpro.com
+2018-01-21 19:39:30 DEBUG headers:136 - http-outgoing-21 >> Connection: Keep-Alive
+2018-01-21 19:39:30 DEBUG headers:136 - http-outgoing-21 >> User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)
+2018-01-21 19:39:30 DEBUG headers:136 - http-outgoing-21 >> Accept-Encoding: gzip,deflate
+2018-01-21 19:39:30 DEBUG wire:73 - http-outgoing-21 >> "GET /RestInstruments/json/price?id=10 HTTP/1.1[\r][\n]"
+2018-01-21 19:39:30 DEBUG wire:73 - http-outgoing-21 >> "Host: priceticker.exactpro.com[\r][\n]"
+2018-01-21 19:39:30 DEBUG wire:73 - http-outgoing-21 >> "Connection: Keep-Alive[\r][\n]"
+2018-01-21 19:39:30 DEBUG wire:73 - http-outgoing-21 >> "User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_151)[\r][\n]"
+2018-01-21 19:39:30 DEBUG wire:73 - http-outgoing-21 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-01-21 19:39:30 DEBUG wire:73 - http-outgoing-21 >> "[\r][\n]"
+2018-01-21 19:39:30 DEBUG wire:73 - http-outgoing-21 << "HTTP/1.1 200 OK[\r][\n]"
+2018-01-21 19:39:30 DEBUG wire:73 - http-outgoing-21 << "Server: nginx[\r][\n]"
+2018-01-21 19:39:30 DEBUG wire:73 - http-outgoing-21 << "Date: Sun, 21 Jan 2018 15:40:30 GMT[\r][\n]"
+2018-01-21 19:39:30 DEBUG wire:73 - http-outgoing-21 << "Content-Type: application/json[\r][\n]"
+2018-01-21 19:39:30 DEBUG wire:73 - http-outgoing-21 << "Content-Length: 19[\r][\n]"
+2018-01-21 19:39:30 DEBUG wire:73 - http-outgoing-21 << "Connection: keep-alive[\r][\n]"
+2018-01-21 19:39:30 DEBUG wire:73 - http-outgoing-21 << "[\r][\n]"
+2018-01-21 19:39:30 DEBUG wire:87 - http-outgoing-21 << "{"price":234.32844}"
+2018-01-21 19:39:30 DEBUG headers:122 - http-outgoing-21 << HTTP/1.1 200 OK
+2018-01-21 19:39:30 DEBUG headers:125 - http-outgoing-21 << Server: nginx
+2018-01-21 19:39:30 DEBUG headers:125 - http-outgoing-21 << Date: Sun, 21 Jan 2018 15:40:30 GMT
+2018-01-21 19:39:30 DEBUG headers:125 - http-outgoing-21 << Content-Type: application/json
+2018-01-21 19:39:30 DEBUG headers:125 - http-outgoing-21 << Content-Length: 19
+2018-01-21 19:39:30 DEBUG headers:125 - http-outgoing-21 << Connection: keep-alive
+2018-01-21 19:39:30 DEBUG MainClientExec:285 - Connection can be kept alive indefinitely
+2018-01-21 19:39:30 INFO  ExactProServlet:43 - Length=19
+2018-01-21 19:39:30 DEBUG PoolingHttpClientConnectionManager:341 - Connection [id: 21][route: {}->http://priceticker.exactpro.com:80] can be kept alive indefinitely
+2018-01-21 19:39:30 DEBUG DefaultManagedHttpClientConnection:88 - http-outgoing-21: set socket timeout to 0
+2018-01-21 19:39:30 DEBUG PoolingHttpClientConnectionManager:348 - Connection released: [id: 21][route: {}->http://priceticker.exactpro.com:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2018-01-21 19:39:30 INFO  ExactProPrice:55 - SB={"price":234.32844},
+2018-01-21 19:39:30 DEBUG PoolingHttpClientConnectionManager:408 - Connection manager is shutting down
+2018-01-21 19:39:30 DEBUG DefaultManagedHttpClientConnection:79 - http-outgoing-21: Close connection
+2018-01-21 19:39:30 DEBUG PoolingHttpClientConnectionManager:414 - Connection manager shut down
+2018-01-21 19:39:30 INFO  ExactProPrice:63 - RET="{\"price\":234.32844}{\"price\":234.32844}"
+2018-01-21 19:39:37 INFO  WSServer:53 - WS Client disconnected: 0 Reason: CloseReason: code [1001], reason [The web application is stopping]
+2018-01-21 19:39:37 ERROR WSServer:65 - java.lang.InterruptedException: sleep interrupted

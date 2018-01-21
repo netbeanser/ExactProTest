@@ -1,0 +1,64 @@
+      {
+        test: /\.css$/,
+        include : APP_DIR+'/css',            
+        use: [ 'to-string-loader', 'css-loader' ]
+      }
+
+        return (
+        <tbody>
+          arrOfArr.map((row) => {
+
+          <tr key={row.toString()}>
+          {row.map((col) => {
+            <div>
+                  <td className='no-right-border'>{prices[col].instrName}</td>
+                  <td className='no-left-border'><button id={'b_'+col} onClick={this.doInstrRemove}>X</button></td>
+                  <td>{prices[col].price}</td>
+                  </div>
+          }
+
+          )}
+          </tr>   
+        })
+        </tbody>
+        );
+    }
+
+                  <table className='PriceTable'>                       
+              <tbody>              
+                {instrNums.map((instrNum) => 
+                <tr key={instrNum} id={'tr_'+instrNum}>
+                  <td hidden>{instrNum}</td>
+                  <td className='no-right-border'>{prices[instrNum].instrName+' '}</td>
+                  <td className='no-left-border'><button id={'b_'+instrNum} onClick={this.doInstrRemove}>X</button></td>
+                  <td>{prices[instrNum].price}</td>
+                </tr>)
+                }     
+              </tbody>
+            <h5>Multicolumn style</h5>  
+            </table>  
+
+/*
+            <Websocket url={this.props.urlR}
+              onOpen={this.handleOpen.bind(this)}
+              onClose={this.handleClose.bind(this)}
+              onMessage={this.handleMessage.bind(this)} 
+              debug={true}
+              ref={Websocket => {
+                this.refWebSocket = Websocket;}}    
+            />                        
+            */    
+
+                        plugins: [
+      new CleanWebpackPlugin([BUILD_DIR]),
+      new HtmlWebpackPlugin({
+      title: 'Production'
+     }),
+      new UglifyJSPlugin(),
+   ],
+
+   const webpack = require('webpack');
+const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
