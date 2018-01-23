@@ -17,7 +17,6 @@ import javax.websocket.CloseReason;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ConcurrentHashMap; 
 import org.apache.log4j.Logger;
-import java.io.IOException;
 import java.util.ArrayList;
 import exactprotest.execs.ExactProShedule;
  
@@ -49,6 +48,12 @@ public class WSServer {
     @OnClose
     public void onClose(Session session,CloseReason reason){
         wsSessions.remove(session);
+        ExactProShedule eps = wsSessParams.get(session.getId());
+        if (eps != null) {
+            eps.getScheduledFuture().cancel(true);
+            eps.runCall(false);
+            logger.info("Canceled callRates for session: "+ session.getId());
+        }               
         wsSessParams.remove(session.getId());
         logger.info("WS Client disconnected: "+ session.getId()+" Reason: "+reason);        
     }
@@ -57,10 +62,10 @@ public class WSServer {
     public void onMessage(String message,Session session){
         logger.info("Message from client: sessionId="+session.getId()+" Msg: "+ message);
         ArrayList ids = new Gson().fromJson(message, ArrayList.class);
-        logger.info("IDDDDDSSS="+ids.toString());
         ExactProShedule eps = wsSessParams.get(session.getId());
         if (eps != null) {
             eps.getScheduledFuture().cancel(true);
+            eps.runCall(false);
             logger.info("Canceled callRates for session: "+ session.getId());
         }           
         eps = new ExactProShedule();
@@ -75,7 +80,6 @@ public class WSServer {
     @OnError
     public void onError(Throwable e){
         logger.error("Connection error: "+ e);
-        e.printStackTrace();
     }    
         
 }

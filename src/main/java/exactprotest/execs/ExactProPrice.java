@@ -18,9 +18,7 @@ public class ExactProPrice implements Runnable {
     private final List<Integer> IDs = new ArrayList<>();
     
     private String ret = "";
-    
-    private volatile boolean done = false;
-    
+      
     private static RequestConfig requestConfig = RequestConfig.custom()
                 .setSocketTimeout(ExactProConfig.getConnectTimeout())
                 .setConnectTimeout(ExactProConfig.getConnectTimeout())
@@ -29,9 +27,9 @@ public class ExactProPrice implements Runnable {
     
     private static String rateUrl = ExactProConfig.getRateUrl();
     
-    public boolean isDone(){
-        return done;
-    }
+//    public boolean isDone(){
+//        return done;
+//    }
     
     public ExactProPrice(List<String> IDs){
         for (String s: IDs){            
@@ -45,30 +43,57 @@ public class ExactProPrice implements Runnable {
     
     @Override
     public void run () {
-        done = false;
         StringBuilder sb = new StringBuilder();
-        sb.append('{');
+        sb.append('[');
         for (Integer id : IDs){
             HttpGet httpGet = new HttpGet(rateUrl+id);                    
             httpGet.setConfig(requestConfig);
             
             try (CloseableHttpClient httpClient = HttpClients.createDefault()){                                        
                 String respBody = httpClient.execute(httpGet, new ExactProResponseHandler());  
-                sb.append(id.toString());
-                sb.append(":");
-                sb.append(respBody);
-                sb.append(",");   
-                logger.info("SB="+sb.toString());
+                Pr pr = new Gson().fromJson(respBody, Pr.class);
+                pr.setId(id);
+                sb.append(pr.toString());
+                sb.append(",");      
             } catch (Exception e){
                 logger.error("Exception occured: "+e);
             }              
         }
         sb.deleteCharAt(sb.lastIndexOf(","));
-        sb.append("}");
+        sb.append("]");
         ret = sb.toString();
         logger.info("RET="+ret);
-        done = true;
-        
+        synchronized(this){
+            notify();
+        }        
     }
+    
+    private class Pr {
+        private float price;
+        private int id;
+        
+        public Pr(){};
+        
+        public Pr(float price,int id) {
+            this.price = price;
+            this.id = id;
+        }
+
+        public void setPrice(float price) {
+            this.price = price;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+        
+        
+        
+        @Override
+        public String toString(){
+            return "{ \"id\":"+id+",\"price\":"+price+" }";
+        }
+    }
+    
     
 }
