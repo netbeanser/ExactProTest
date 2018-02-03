@@ -81,7 +81,8 @@ class InstrumentList extends Component {
 }
 
 InstrumentList.propTypes = {
-    url : PropTypes.string
+    url : PropTypes.string,
+    instrSelectionChange : PropTypes.func
  }
 
 InstrumentList.defaultProps = {

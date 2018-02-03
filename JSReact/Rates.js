@@ -5,8 +5,8 @@ const  W3CWebSocket = require('websocket').w3cwebsocket;
 
 class Rates extends Component {
 
-  constructor(props){
-    super(props);
+  constructor(...args){
+    super(...args);
     this.state = { instrPerRow : 1,
       wsOpen : false,
       ws : undefined,
@@ -40,13 +40,12 @@ class Rates extends Component {
       arr.map(p => {
         console.log("INSTR in OnMessage="+p["id"]);
         let instrName = this.props.selectedInstruments[p["id"]];
-        console.log("InstrName="+instrName);
+//        console.log("InstrName="+instrName);
         let priceItem = {};
         priceItem.instrName = instrName;
         priceItem.price = p["price"];
         prices[p["id"]] = priceItem;
-        console.log("In handleWsMessage: priceItem="+JSON.stringify(priceItem));
-        console.log("In handleWsMessage: prices="+JSON.stringify(prices));   
+//        console.log("In handleWsMessage: priceItem="+JSON.stringify(priceItem));
       });
       this.setState({prices : prices});    
   }
@@ -56,6 +55,8 @@ class Rates extends Component {
   componentWillReceiveProps(nextProps){
 
     let prices = this.state.prices;
+
+    const ws = this.state.ws;
 
     const oldInstrIds = Object.keys(this.state.prices);
     const newInstrIds = Object.keys(nextProps.selectedInstruments);
@@ -81,8 +82,9 @@ class Rates extends Component {
       })
       .catch(err => console.error(err));      
     })
-    if (this.state.ws !== undefined &&  this.state.ws.readyState === this.state.ws.OPEN ){
-      this.state.ws.send(JSON.stringify(Object.keys(nextProps.selectedInstruments)));
+
+    if (ws !== undefined &&  ws.readyState === ws.OPEN ){
+      ws.send(JSON.stringify(Object.keys(nextProps.selectedInstruments)));
     }
   }
 
@@ -126,6 +128,7 @@ class Rates extends Component {
   } 
 
   componentDidMount() {
+    console.log("Component Did Mount");
       if (this.state.intervalId !== undefined) {clearInterval(this.state.intervalId);}
   //    let intervalId = setInterval(this.fetchData, 60000);
   //    this.setState({ intervalId : intervalId });
@@ -236,7 +239,8 @@ class Rates extends Component {
 
 Rates.propTypes = {
     url : PropTypes.string.isRequired,
-    urlR : PropTypes.string.isRequired
+    urlR : PropTypes.string.isRequired,
+    instrRemove : PropTypes.func
  }
 
 Rates.defaultProps = {

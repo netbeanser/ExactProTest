@@ -26,11 +26,7 @@ public class ExactProPrice implements Runnable {
                 .build();
     
     private static String rateUrl = ExactProConfig.getRateUrl();
-    
-//    public boolean isDone(){
-//        return done;
-//    }
-    
+       
     public ExactProPrice(List<String> IDs){
         for (String s: IDs){            
             this.IDs.add(Integer.parseInt(s));
@@ -95,5 +91,8 @@ public class ExactProPrice implements Runnable {
         }
     }
     
-    
+    @Override
+    public String toString(){
+        return "ExactProPrice ids="+IDs.toString();
+    }
 }

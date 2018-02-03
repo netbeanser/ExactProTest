@@ -6,8 +6,8 @@ import Rates from './Rates';
 
 class App extends React.Component {
 
-  constructor(props) {
-    super(props);
+  constructor(...args) {
+    super(...args);
 
     this.state = {
       isLoggedIn: false,

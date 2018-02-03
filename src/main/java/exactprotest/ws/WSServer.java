@@ -19,6 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.apache.log4j.Logger;
 import java.util.ArrayList;
 import exactprotest.execs.ExactProShedule;
+import exactprotest.execs.CallRateThread; 
  
 @ServerEndpoint(value = "/realtime",configurator = WSConfig.class,subprotocols = {"json"}) 
 public class WSServer {
@@ -33,16 +34,10 @@ public class WSServer {
 
     @OnOpen
     public void onOpen(Session session){
-        logger.info("WS Client connected: "+session.getId());
+        logger.info("WS Client connected. SessionId="+session.getId());
         
         wsSessions.add(session);
-/*        try {
-            session.getBasicRemote().sendText("On Line");
-        } catch (IOException ioe) {
-            logger.error("IOExcetion onOpen: "+ioe);            
-        }
-        
-*/        
+      
     }
      
     @OnClose
@@ -50,9 +45,8 @@ public class WSServer {
         wsSessions.remove(session);
         ExactProShedule eps = wsSessParams.get(session.getId());
         if (eps != null) {
-            eps.getScheduledFuture().cancel(true);
-            eps.runCall(false);
-            logger.info("Canceled callRates for session: "+ session.getId());
+            eps.getCallRateThread().doStop();
+            logger.info("Canceled onClose callRates for session: "+ session.getId());
         }               
         wsSessParams.remove(session.getId());
         logger.info("WS Client disconnected: "+ session.getId()+" Reason: "+reason);        
@@ -64,12 +58,12 @@ public class WSServer {
         ArrayList ids = new Gson().fromJson(message, ArrayList.class);
         ExactProShedule eps = wsSessParams.get(session.getId());
         if (eps != null) {
-            eps.getScheduledFuture().cancel(true);
-            eps.runCall(false);
-            logger.info("Canceled callRates for session: "+ session.getId());
+            eps.getCallRateThread().doStop();
+            logger.info("Canceled onMessage callRates for session: "+ session.getId());
         }           
         eps = new ExactProShedule();
         wsSessParams.put(session.getId(), eps);
+        logger.info("New sessparams put: "+ session.getId()+" Message:"+message);
         try {
             eps.callRates(ids, session);
         } catch (InterruptedException ie){
@@ -79,7 +73,8 @@ public class WSServer {
 
     @OnError
     public void onError(Throwable e){
-        logger.error("Connection error: "+ e);
+        logger.error("WS Connection error: "+ e.getCause());
+        e.printStackTrace();
     }    
         
 }

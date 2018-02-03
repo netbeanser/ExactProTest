@@ -17,7 +17,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 
 import exactprotest.config.ExactProConfig;
-import exactprotest.execs.ExactProShedule;
+import exactprotest.execs.ExactProScheduledPool;
 
 @WebListener
 public class ExactProContextListener implements ServletContextListener{
@@ -87,7 +87,7 @@ public class ExactProContextListener implements ServletContextListener{
     
     @Override
     public void contextDestroyed(ServletContextEvent evt){
-        ExactProShedule.getScheduledPool().shutdownNow();
+        ExactProScheduledPool.getPricePool().shutdownNow();
      }       
     
 }

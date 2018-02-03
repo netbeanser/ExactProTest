@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 //import "../pages/css/style.css";
 
 class LoginForm extends Component {
-  constructor(props) {
-    super(props);
+  constructor(...args) {
+    super(...args);
     this.state = {
       email: "",
       password: ""
@@ -62,7 +62,8 @@ class LoginForm extends Component {
 }
 
 LoginForm.propTypes = {
-    loginUrl : PropTypes.string
+    loginUrl : PropTypes.string,
+    loggedIn : PropTypes.func
  }
 
 LoginForm.defaultProps = {
