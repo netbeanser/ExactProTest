@@ -41,8 +41,11 @@ public class ExactProResponseHandler implements ResponseHandler<String>{
                     
                     long len = entity.getContentLength();
                     if (len != -1 && len < 2048) {
-                        respBody = entity != null ? EntityUtils.toString(entity) : "";
+                        respBody = EntityUtils.toString(entity);
+                    } else {
+                        respBody = "";
                     }
+                    
                 } else {
                     throw new ClientProtocolException("Противный статус код: "+status);
                 }    

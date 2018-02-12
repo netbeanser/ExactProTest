@@ -11,8 +11,8 @@ import exactprotest.config.ExactProConfig;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 
 public class ExactProScheduledPool {
-    
-    private static ScheduledThreadPoolExecutor pricePool = 
+       
+    private final static ScheduledThreadPoolExecutor pricePool = 
             new ScheduledThreadPoolExecutor(ExactProConfig.getMaxClients());    
     
     public static ScheduledThreadPoolExecutor getPricePool(){

@@ -4,6 +4,7 @@ import exactprotest.config.ExactProConfig;
 import exactprotest.web.ExactProResponseHandler;
 import java.util.List;
 import java.util.ArrayList;
+import java.io.IOException;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -51,7 +52,7 @@ public class ExactProPrice implements Runnable {
                 pr.setId(id);
                 sb.append(pr.toString());
                 sb.append(",");      
-            } catch (Exception e){
+            } catch (IOException e){
                 logger.error("Exception occured: "+e);
             }              
         }

@@ -3,7 +3,7 @@
  * @date Tue Jan 14 23:45 2018 MSK
  * @author dglunts
  * 
- * Description : Thread retrieves rates
+ * Description : This Thread retrieves rates
  */
 package exactprotest.execs;
 
@@ -13,13 +13,13 @@ import java.util.ArrayList;
 import javax.websocket.Session;
 import org.apache.log4j.Logger;
 import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.io.IOException;
 
 public class CallRateThread extends Thread {
     
-    private ArrayList<String> ids;
+    private final ArrayList<String> ids;
     
-    private Session session;
+    private final Session session;
     
     public CallRateThread(ArrayList ids,Session session){
         this.session = session;
@@ -34,12 +34,12 @@ public class CallRateThread extends Thread {
     private boolean runCall = true;
     
     public void doStop(){
-        this.runCall = false;
+        runCall = false;
         sf.cancel(true);
         logger.info("In doStop sessionId "+session.getId()+" ids: "+ids);
     }
        
-    
+    @Override
     public void run(){
         logger.info("Thread started: "+Thread.currentThread().toString());
         ExactProPrice epp = new ExactProPrice(ids);
@@ -59,8 +59,8 @@ public class CallRateThread extends Thread {
             if (session.isOpen() ) {
                 try {
                     session.getBasicRemote().sendText(epp.getRet());
-                } catch (Exception e){
-                    logger.error("callRates Exception: "+e);
+                } catch (IOException ioe){
+                    logger.error("callRates Exception: "+ioe);
                 }
             }
         }        

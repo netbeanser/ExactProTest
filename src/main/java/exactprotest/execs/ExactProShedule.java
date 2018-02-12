@@ -2,7 +2,6 @@ package exactprotest.execs;
 
 
 import java.util.ArrayList;
-import exactprotest.config.ExactProConfig;
 import javax.websocket.Session;
 import org.apache.log4j.Logger;
 

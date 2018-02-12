@@ -33,7 +33,7 @@ import org.apache.log4j.Logger;
         
         private static final long serialVersionUID = 345L;
         
-        private final static Logger logger =  Logger.getLogger(ExactProServlet.class); 
+        private static final Logger logger =  Logger.getLogger(ExactProServlet.class); 
         
         @Override
         public void doPost(HttpServletRequest req,HttpServletResponse resp) 
@@ -54,29 +54,17 @@ import org.apache.log4j.Logger;
             
             resp.setContentType("application/json");
             resp.setHeader("Content-Encoding", "utf8");
-//!!!!!!!!            resp.setHeader("Access-Control-Allow-Origin", "*");
+//!!!!!!!!            resp.setHeader("Access-Control-Allow-Origin", "*"); //Для отладки!!
             PrintWriter out = resp.getWriter();               
             /*
             Берем из конфига, который мы ранее в ExactProContextListener сложили 
-            в ServletContext, url списка инструментов, url котировок и проч.
+            в класс ExactProConfig на этапе инициализации приложения
             */
-            int connectTimeout = ((ExactProConfig)
-                req
-                .getServletContext()
-                .getAttribute("config"))
-                .getConnectTimeout();  
+            int connectTimeout = ExactProConfig.getConnectTimeout();
                         
-            String instrumentListUrl = ((ExactProConfig)
-                req
-                .getServletContext()
-                .getAttribute("config"))
-                .getInstrumentListUrl();            
+            String instrumentListUrl = ExactProConfig.getInstrumentListUrl();
             
-            String rateUrl = ((ExactProConfig)
-                req
-                .getServletContext()
-                .getAttribute("config"))
-                .getRateUrl();                        
+            String rateUrl = ExactProConfig.getRateUrl();
             //Таймауты
             RequestConfig requestConfig = RequestConfig.custom()
                 .setSocketTimeout(connectTimeout)
@@ -97,14 +85,12 @@ import org.apache.log4j.Logger;
                 дефолтный PoolingHttpClientConnectionManager освобождает ресурсы сам
                 */
                 try (CloseableHttpClient httpClient = HttpClients.createDefault()){
-                //RetryHandler 
-                //KeepAliveStrategy
-                //CompletionService
+                //TODO or not TODO: RetryHandler, KeepAliveStrategy, CompletionService
                     respBody = httpClient.execute(httpGet, new ExactProResponseHandler());                                     
                     out.println(respBody);                        
                     out.flush();
                     out.close();
-                } catch (Exception e){
+                } catch (IOException e){
                     logger.error("Exception occured: "+e);
                 }
 

@@ -20,7 +20,7 @@ public class StaticServlet extends HttpServlet {
     
     private static final long serialVersionUID = 567L;
     
-    private final static Logger logger =  Logger.getLogger(StaticServlet.class); 
+    private static final Logger logger =  Logger.getLogger(StaticServlet.class); 
         
     @Override
     protected void doPost(HttpServletRequest req,HttpServletResponse resp) 

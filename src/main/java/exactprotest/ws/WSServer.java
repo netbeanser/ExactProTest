@@ -14,20 +14,16 @@ import javax.websocket.OnOpen;
 import javax.websocket.server.ServerEndpoint;
 import javax.websocket.Session;
 import javax.websocket.CloseReason;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ConcurrentHashMap; 
 import org.apache.log4j.Logger;
 import java.util.ArrayList;
 import exactprotest.execs.ExactProShedule;
-import exactprotest.execs.CallRateThread; 
  
 @ServerEndpoint(value = "/realtime",configurator = WSConfig.class,subprotocols = {"json"}) 
 public class WSServer {
     
     private final Logger logger =  Logger.getLogger(WSServer.class);
-    
-    private final CopyOnWriteArrayList<Session> wsSessions = new CopyOnWriteArrayList<>();
-    
+      
     private final ConcurrentHashMap<String,ExactProShedule> wsSessParams = new ConcurrentHashMap<>();
     
     public WSServer(){};
@@ -35,14 +31,12 @@ public class WSServer {
     @OnOpen
     public void onOpen(Session session){
         logger.info("WS Client connected. SessionId="+session.getId());
-        
-        wsSessions.add(session);
-      
+              
     }
      
     @OnClose
     public void onClose(Session session,CloseReason reason){
-        wsSessions.remove(session);
+
         ExactProShedule eps = wsSessParams.get(session.getId());
         if (eps != null) {
             eps.getCallRateThread().doStop();
@@ -58,7 +52,7 @@ public class WSServer {
         ArrayList ids = new Gson().fromJson(message, ArrayList.class);
         ExactProShedule eps = wsSessParams.get(session.getId());
         if (eps != null) {
-            eps.getCallRateThread().doStop();
+            eps.getCallRateThread().doStop(); //Завершает поток, утечки памяти не будет
             logger.info("Canceled onMessage callRates for session: "+ session.getId());
         }           
         eps = new ExactProShedule();
@@ -73,7 +67,7 @@ public class WSServer {
 
     @OnError
     public void onError(Throwable e){
-        logger.error("WS Connection error: "+ e.getCause());
+        logger.error("WS onError: "+ e);
         e.printStackTrace();
     }    
         
